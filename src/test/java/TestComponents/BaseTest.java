@@ -34,11 +34,13 @@ public class BaseTest {
 
 	public WebDriver driver;
 	public WikiObjects wikiPageInit;
+	public Properties prop ;
+	FileInputStream fis;
 
 	public WebDriver initializeDriver() throws IOException {
 
-		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(
+		prop = new Properties();
+		fis = new FileInputStream(
 				System.getProperty("user.dir") + "//src//main//java//resources//GlobalData.properties");
 		prop.load(fis);
 

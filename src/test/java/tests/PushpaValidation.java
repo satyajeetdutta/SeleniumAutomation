@@ -18,25 +18,26 @@ public class PushpaValidation extends BaseTest {
 	@Test
 	public void ValidityTest() throws IOException {
 
+		String movieName = prop.getProperty("movieTitle");
 		WikiObjects w = new WikiObjects(driver);
 		w.goTo();
-		w.WikiSendKey("Pushpa: The Rise");
+		w.WikiSendKey(movieName);
 
 		w.WikiSearchButton();
 
 		String releaseDayWiki = w.ReleaseDayCheck("Release date");
 		String releasecountryWiki = w.CountryCheck("Country");
 
-		System.out.println(releaseDayWiki + " " + releasecountryWiki);
+//		System.out.println(releaseDayWiki + " " + releasecountryWiki);
 		IMDBObjects i = new IMDBObjects(driver);
 		i.goTo();
-		i.searchMovie("Pushpa: The Rise");
+		i.searchMovie(movieName);
 		String releaseDayIMDB = i.ReleaseDate();
 		String releaseCountryIMDB = i.ReleaseCountry();
 
 //		System.out.println(releaseDayIMDB+"  "+releaseCountryIMDB);
 
-		System.out.println(releaseDayIMDB);
+//		System.out.println(releaseDayIMDB);
 
 		Assert.assertEquals(releaseDayWiki, releaseDayIMDB);
 		Assert.assertEquals(releasecountryWiki, releaseCountryIMDB);
