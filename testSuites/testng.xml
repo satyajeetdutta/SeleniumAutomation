@@ -7,9 +7,9 @@
 </listeners>
 
 
-  <test thread-count="5" name="PushpaValidationTest">
+  <test thread-count="5" name="MovieTitleValidationTest">
     <classes>
-      <class name="tests.PushpaValidation"/>
+      <class name="tests.MovieTitleValidationTest"/>
     </classes>
   </test> <!-- Test -->
   

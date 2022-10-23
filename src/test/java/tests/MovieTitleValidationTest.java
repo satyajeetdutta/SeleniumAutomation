@@ -13,7 +13,7 @@ import TestComponents.BaseTest;
 import pageobjects.IMDBObjects;
 import pageobjects.WikiObjects;
 
-public class PushpaValidation extends BaseTest {
+public class MovieTitleValidationTest extends BaseTest {
 
 	@Test
 	public void ValidityTest() throws IOException {

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-23T14:36:53Z" name="Default suite" finished-at="2022-10-23T14:37:57Z" duration-ms="63602">
+  <suite started-at="2022-10-23T15:37:44Z" name="Default suite" finished-at="2022-10-23T15:39:22Z" duration-ms="97628">
     <groups>
     </groups>
-    <test started-at="2022-10-23T14:36:53Z" name="Default test" finished-at="2022-10-23T14:37:57Z" duration-ms="63602">
-      <class name="tests.PushpaValidation">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.PushpaValidation@8576fa0]" started-at="2022-10-23T14:36:53Z" name="launchApplication" finished-at="2022-10-23T14:37:04Z" duration-ms="10601" status="PASS">
+    <test started-at="2022-10-23T15:37:44Z" name="Default test" finished-at="2022-10-23T15:39:22Z" duration-ms="97628">
+      <class name="tests.MovieTitleValidationTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.MovieTitleValidationTest@b4711e2]" started-at="2022-10-23T15:37:44Z" name="launchApplication" finished-at="2022-10-23T15:38:00Z" duration-ms="15940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="ValidityTest()[pri:0, instance:tests.PushpaValidation@8576fa0]" started-at="2022-10-23T14:37:04Z" name="ValidityTest" finished-at="2022-10-23T14:37:55Z" duration-ms="51625" status="PASS">
+        <test-method signature="ValidityTest()[pri:0, instance:tests.MovieTitleValidationTest@b4711e2]" started-at="2022-10-23T15:38:00Z" name="ValidityTest" finished-at="2022-10-23T15:39:11Z" duration-ms="71000" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidityTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PushpaValidation@8576fa0]" started-at="2022-10-23T14:37:55Z" name="tearDown" finished-at="2022-10-23T14:37:57Z" duration-ms="1305" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.MovieTitleValidationTest@b4711e2]" started-at="2022-10-23T15:39:11Z" name="tearDown" finished-at="2022-10-23T15:39:22Z" duration-ms="10613" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.PushpaValidation -->
+      </class> <!-- tests.MovieTitleValidationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
