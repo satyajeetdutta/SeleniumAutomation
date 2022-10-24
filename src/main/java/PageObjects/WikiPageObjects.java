@@ -65,9 +65,9 @@ public class WikiPageObjects extends AbstractComponents {
 			String actualXpath = LeftRowValue() + i + RightRowValue();
 			WebElement text = driver.findElement(By.xpath(actualXpath));
 			scrollToElement(text);
-			// System.out.println(text.getText());
+
 			if (text.getText().contains(releaseDay)) {
-				// System.out.println(text.getText());
+
 				String releaseRow = text.getText();
 				releaseDay = releaseRow.split("date")[1].trim();
 
@@ -83,7 +83,6 @@ public class WikiPageObjects extends AbstractComponents {
 
 			String actualXpath = LeftRowValue() + i + RightRowValue();
 			WebElement text = driver.findElement(By.xpath(actualXpath));
-			// System.out.println(text.getText());
 
 			if (text.getText().contains(country)) {
 				String countryRow = text.getText();

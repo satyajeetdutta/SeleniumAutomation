@@ -18,13 +18,6 @@ public class IMDBPageObjects extends AbstractComponents {
 		PageFactory.initElements(driver, this);
 	}
 
-	/*
-	 * Release date December 17, 2021 (United States) Country of origin India
-	 * 
-	 */
-
-	// input[@id='suggestion-search']
-
 	@FindBy(xpath = "//input[@id='suggestion-search']")
 	private WebElement searchText;
 
@@ -48,7 +41,6 @@ public class IMDBPageObjects extends AbstractComponents {
 
 		String[] strSplit = onlyDate.split(",");
 		String year = strSplit[1].split("\\(")[0].trim();// year contains the year in which movie was released
-		System.out.println(year);
 
 		String[] dateAndMonth = strSplit[0].split(" ");
 

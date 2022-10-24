@@ -16,7 +16,7 @@ import testComponent.BaseTest;
 public class MovieTitleValidationTest extends BaseTest {
 
 	@Test
-	public void ValidityTest() throws IOException {
+	public void movieValidityTest() throws IOException {
 
 		String movieName = prop.getProperty("movieTitle");
 		WikiPageObjects w = new WikiPageObjects(driver);
@@ -28,16 +28,11 @@ public class MovieTitleValidationTest extends BaseTest {
 		String releaseDayWiki = w.ReleaseDayCheck("Release date");
 		String releasecountryWiki = w.CountryCheck("Country");
 
-//		System.out.println(releaseDayWiki + " " + releasecountryWiki);
 		IMDBPageObjects i = new IMDBPageObjects(driver);
 		i.goTo();
 		i.searchMovie(movieName);
 		String releaseDayIMDB = i.ReleaseDate();
 		String releaseCountryIMDB = i.ReleaseCountry();
-
-//		System.out.println(releaseDayIMDB+"  "+releaseCountryIMDB);
-
-//		System.out.println(releaseDayIMDB);
 
 		Assert.assertEquals(releaseDayWiki, releaseDayIMDB);
 		Assert.assertEquals(releasecountryWiki, releaseCountryIMDB);

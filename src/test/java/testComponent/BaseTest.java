@@ -1,6 +1,7 @@
 package testComponent;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.asserts.SoftAssert;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -34,9 +35,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
 	public WebDriver driver;
-	
+
 	public WikiPageObjects wikiPageInit;
-	public Properties prop ;
+	public Properties prop;
 	FileInputStream fis;
 
 	public WebDriver initializeDriver() throws IOException {
@@ -72,4 +73,5 @@ public class BaseTest {
 	public void tearDown() {
 		driver.close();
 	}
+
 }

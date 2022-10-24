@@ -1,6 +1,6 @@
  <h1>SeleniumAutomation</h1>
  <h2>TestVagrant Project</h2>
-     In SeleniumAutomation Repository has test case implementation for movie release date and release country which needs to be validated in WikiPedia and IMDB. It allows you to change movie name as your like which can be changed in GlobalData.properties file which is present "TestVagrant\SeleniumAutomation\src\main\java\resources\GlobalData.properties" file path in the project . This makes it a perfect automation test case for general purpose usage. 
+     In SeleniumAutomation Repository has test case implementation for movie release date and release country which needs to be validated in WikiPedia and IMDB. It allows you to change movie name as your like which can be changed in GlobalData.properties file which is present "src\main\java\resources\GlobalData.properties" file path in the project . This makes it a perfect automation test case for general purpose usage. 
  <h2>Files and its Features</h2>
 -Under src/main/java there are three packages namely AbstractComponents, PageObjects and Resources.<br>
 -In AbstractComponents,there is a java file AbstractComponents which contains reusable components such as explicit wait.<br>
