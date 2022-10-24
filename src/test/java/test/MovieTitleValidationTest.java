@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,9 +9,9 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import TestComponents.BaseTest;
-import pageobjects.IMDBObjects;
-import pageobjects.WikiObjects;
+import PageObjects.IMDBPageObjects;
+import PageObjects.WikiPageObjects;
+import testComponent.BaseTest;
 
 public class MovieTitleValidationTest extends BaseTest {
 
@@ -19,7 +19,7 @@ public class MovieTitleValidationTest extends BaseTest {
 	public void ValidityTest() throws IOException {
 
 		String movieName = prop.getProperty("movieTitle");
-		WikiObjects w = new WikiObjects(driver);
+		WikiPageObjects w = new WikiPageObjects(driver);
 		w.goTo();
 		w.WikiSendKey(movieName);
 
@@ -29,7 +29,7 @@ public class MovieTitleValidationTest extends BaseTest {
 		String releasecountryWiki = w.CountryCheck("Country");
 
 //		System.out.println(releaseDayWiki + " " + releasecountryWiki);
-		IMDBObjects i = new IMDBObjects(driver);
+		IMDBPageObjects i = new IMDBPageObjects(driver);
 		i.goTo();
 		i.searchMovie(movieName);
 		String releaseDayIMDB = i.ReleaseDate();

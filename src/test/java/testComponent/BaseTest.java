@@ -1,4 +1,4 @@
-package TestComponents;
+package testComponent;
 
 import org.testng.annotations.AfterMethod;
 
@@ -27,13 +27,15 @@ import org.testng.annotations.BeforeMethod;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import PageObjects.WikiPageObjects;
+//import PageObjects.WikiPageObjects;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pageobjects.WikiObjects;
 
 public class BaseTest {
 
 	public WebDriver driver;
-	public WikiObjects wikiPageInit;
+	
+	public WikiPageObjects wikiPageInit;
 	public Properties prop ;
 	FileInputStream fis;
 

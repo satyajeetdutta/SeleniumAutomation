@@ -1,4 +1,4 @@
-package pageobjects;
+package PageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,11 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import AbstractComponents.AbstractComponents;
 
-public class IMDBObjects extends AbstractComponents {
+public class IMDBPageObjects extends AbstractComponents {
 
 	WebDriver driver;
 
-	public IMDBObjects(WebDriver driver) {
+	public IMDBPageObjects(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

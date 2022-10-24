@@ -1,4 +1,4 @@
-package pageobjects;
+package PageObjects;
 
 import java.util.List;
 
@@ -10,11 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import AbstractComponents.AbstractComponents;
 
-public class WikiObjects extends AbstractComponents {
+public class WikiPageObjects extends AbstractComponents {
 
 	WebDriver driver;
 
-	public WikiObjects(WebDriver driver) {
+	public WikiPageObjects(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
