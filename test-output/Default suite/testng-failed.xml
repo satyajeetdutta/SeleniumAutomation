@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.PushpaValidation">
+      <class name="tests.MovieTitleValidationTest">
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
           <include name="ValidityTest"/>
         </methods>
-      </class> <!-- tests.PushpaValidation -->
+      </class> <!-- tests.MovieTitleValidationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
