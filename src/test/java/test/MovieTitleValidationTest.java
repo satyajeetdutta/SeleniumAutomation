@@ -21,12 +21,13 @@ public class MovieTitleValidationTest extends BaseTest {
 		String movieName = prop.getProperty("movieTitle");
 		WikiPageObjects w = new WikiPageObjects(driver);
 		w.goTo();
-		w.WikiSendKey(movieName);
+		w.wikiSendKey(movieName);
 
-		w.WikiSearchButton();
+		w.wikiSearchButton();
 
-		String releaseDayWiki = w.ReleaseDayCheck("Release date");
-		String releasecountryWiki = w.CountryCheck("Country");
+		String releaseDayWiki = w.releaseDayCheck("Release date");
+		String releasecountryWiki = w.releaseCountryCheck("Country");
+
 
 		IMDBPageObjects i = new IMDBPageObjects(driver);
 		i.goTo();

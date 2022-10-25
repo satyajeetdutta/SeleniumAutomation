@@ -27,70 +27,37 @@ public class WikiPageObjects extends AbstractComponents {
 	@FindBy(id = "searchButton")
 	private WebElement wikiSearchButton;
 
-	@FindBy(xpath = "//table[@class='infobox vevent']/tbody/tr")
-	private List<WebElement> rowsCount;
-
-	private String leftXpath = "//*[@id=\"mw-content-text\"]/div[1]/table[1]/tbody/tr[";
-	private String rightXpath = "]";
+	@FindBy(xpath = "// table[@class='infobox vevent']/tbody/tr")
+	private List<WebElement> wikiRows;
+	
+	@FindBy(xpath = "// table[@class='infobox vevent']/tbody/tr[12]")
+	private WebElement movieReleaseDate;
 
 	By wikiSearchBy = By.xpath("//input[@placeholder='Search Wikipedia']");
 	By moviePageBy = By.cssSelector(".mw-wiki-logo");
 
-	public void WikiSendKey(String movieName) {
+	public void wikiSendKey(String movieName) {
 		waitForElementToAppear(wikiSearchBy);
 		wikiSearch.sendKeys(movieName);
 	}
 
-	public void WikiSearchButton() {
+	public void wikiSearchButton() {
 		wikiSearchButton.click();
 	}
 
-	public int RowsCount() {
+	public String releaseDayCheck(String releaseDay) {
+		scrollToElement(movieReleaseDate);
 		waitForElementToAppear(moviePageBy);
-		return rowsCount.size();
+		String originalReleaseDay = wikiRows.stream().filter(i -> i.getText().contains(releaseDay))
+				.map(i -> i.getText().split("date")[1].trim()).findFirst().orElse(null);
+		return originalReleaseDay;
 	}
 
-	public String LeftRowValue() {
-		return leftXpath;
-	}
+	public String releaseCountryCheck(String country) {
+		String originalcountry = wikiRows.stream().filter(i -> i.getText().contains(country))
+				.map(i -> i.getText().split(" ")[1].trim()).findFirst().orElse(null);
 
-	public String RightRowValue() {
-		return rightXpath;
-	}
-
-	public String ReleaseDayCheck(String releaseDay) {
-
-		for (int i = 3; i <= RowsCount(); i++) {
-
-			String actualXpath = LeftRowValue() + i + RightRowValue();
-			WebElement text = driver.findElement(By.xpath(actualXpath));
-			scrollToElement(text);
-
-			if (text.getText().contains(releaseDay)) {
-
-				String releaseRow = text.getText();
-				releaseDay = releaseRow.split("date")[1].trim();
-
-			}
-
-		}
-		return releaseDay;
-	}
-
-	public String CountryCheck(String country) {
-
-		for (int i = 3; i <= RowsCount(); i++) {
-
-			String actualXpath = LeftRowValue() + i + RightRowValue();
-			WebElement text = driver.findElement(By.xpath(actualXpath));
-
-			if (text.getText().contains(country)) {
-				String countryRow = text.getText();
-				country = countryRow.split("Country")[1].trim();
-			}
-
-		}
-		return country;
+		return originalcountry;
 	}
 
 	public void goTo() {
