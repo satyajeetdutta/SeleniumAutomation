@@ -2,20 +2,27 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-25T06:50:03Z" name="Default suite" finished-at="2022-10-25T06:51:14Z" duration-ms="71398">
+  <suite started-at="2022-10-26T08:16:18Z" name="Default suite" finished-at="2022-10-26T08:17:20Z" duration-ms="61852">
     <groups>
     </groups>
-    <test started-at="2022-10-25T06:50:03Z" name="Default test" finished-at="2022-10-25T06:51:14Z" duration-ms="71398">
+    <test started-at="2022-10-26T08:16:18Z" name="Default test" finished-at="2022-10-26T08:17:20Z" duration-ms="61852">
       <class name="test.MovieTitleValidationTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:test.MovieTitleValidationTest@b4711e2]" started-at="2022-10-25T06:50:03Z" name="launchApplication" finished-at="2022-10-25T06:50:10Z" duration-ms="7220" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:test.MovieTitleValidationTest@5b6ec132]" started-at="2022-10-26T08:16:18Z" name="launchApplication" finished-at="2022-10-26T08:16:31Z" duration-ms="13104" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="movieValidityTest()[pri:0, instance:test.MovieTitleValidationTest@b4711e2]" started-at="2022-10-25T06:50:10Z" name="movieValidityTest" finished-at="2022-10-25T06:51:14Z" duration-ms="63545" status="PASS">
+        <test-method signature="movieValidityTest(java.lang.String)[pri:0, instance:test.MovieTitleValidationTest@5b6ec132]" started-at="2022-10-26T08:16:31Z" name="movieValidityTest" data-provider="getData" finished-at="2022-10-26T08:17:19Z" duration-ms="47647" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pushpa: The Rise]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- movieValidityTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.MovieTitleValidationTest@b4711e2]" started-at="2022-10-25T06:51:14Z" name="tearDown" finished-at="2022-10-25T06:51:14Z" duration-ms="576" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.MovieTitleValidationTest@5b6ec132]" started-at="2022-10-26T08:17:19Z" name="tearDown" finished-at="2022-10-26T08:17:20Z" duration-ms="1034" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -14,12 +14,13 @@ import PageObjects.WikiPageObjects;
 import testComponent.BaseTest;
 
 public class MovieTitleValidationTest extends BaseTest {
+	WikiPageObjects w;
+	IMDBPageObjects i;
+	@Test(dataProvider="getData")
+	public void movieValidityTest(String movieName) throws IOException {
 
-	@Test
-	public void movieValidityTest() throws IOException {
-
-		String movieName = prop.getProperty("movieTitle");
-		WikiPageObjects w = new WikiPageObjects(driver);
+		//String movieName = prop.getProperty("movieTitle");
+		w = new WikiPageObjects(driver);
 		w.goTo();
 		w.wikiSendKey(movieName);
 
@@ -29,7 +30,7 @@ public class MovieTitleValidationTest extends BaseTest {
 		String releasecountryWiki = w.releaseCountryCheck("Country");
 
 
-		IMDBPageObjects i = new IMDBPageObjects(driver);
+		i = new IMDBPageObjects(driver);
 		i.goTo();
 		i.searchMovie(movieName);
 		String releaseDayIMDB = i.ReleaseDate();

@@ -24,6 +24,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -72,6 +73,11 @@ public class BaseTest {
 
 	public void tearDown() {
 		driver.close();
+	}
+
+	@DataProvider
+	public Object[][] getData() {
+		return new Object[][] { { "Pushpa: The Rise" } };
 	}
 
 }
